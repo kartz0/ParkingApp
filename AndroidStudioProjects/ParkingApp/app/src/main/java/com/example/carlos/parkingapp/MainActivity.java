@@ -13,10 +13,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void Maps(View view){
-        Intent intent = new Intent(this, Location_Options.class);
+    public void OnButtonClick(View view) {
+
+        if (view.getId() == R.id.login_button){
+            Intent intent = new Intent(this, Location_Options.class);
+
+            startActivity(intent);
+        }
+    }
+    public void OnSignupClick(View view){
+    if(view.getId() == R.id.signup_button1) {
+        Intent intent = new Intent(MainActivity.this, signup.class);
 
         startActivity(intent);
 
+    }
     }
 }
