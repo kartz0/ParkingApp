@@ -9,7 +9,6 @@
         android:text="@string/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/signup_name"
         android:layout_margin="2dp"
       />
 
@@ -17,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:id="@+id/editText3" />
+        android:id="@+id/TFName" />
 
     <TextView
         android:text="@string/email"
@@ -30,7 +29,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"/>
+        android:ems="10"
+        android:id="@+id/TFEmail"/>
 
     <TextView
         android:text="@string/password"
@@ -41,7 +41,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"/>
+        android:ems="10"
+        android:inputType="textPassword"
+        android:id="@+id/TFPwd1" />
 
     <TextView
         android:text="@string/confirm"
@@ -52,7 +54,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText5" />
+        android:inputType="textPassword"
+        android:id="@+id/TFPwd2" />
 
     <Button
         android:layout_width="wrap_content"
@@ -61,6 +64,7 @@
         android:padding="2dp"
         android:layout_gravity="center"
         android:text="@string/signup"
-        android:id="@+id/signup_button"/>
+        android:id="@+id/signup_button2"/>
+
 
 </LinearLayout>

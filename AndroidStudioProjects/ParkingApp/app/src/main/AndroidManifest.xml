@@ -16,6 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Location_Options"></activity>
+        <activity android:name=".signup"></activity>
+
+
     </application>
 
 </manifest>
