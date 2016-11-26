@@ -22,14 +22,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
     SQLiteDatabase db;
 
-    private static final String TABLE_CREATE = "CREATE TABLE users (id INTEGER PRIMARY KEY NOT NULL, " +
-                                                            "name text NOT NULL, email text NOT NULL, pwd text NOT NULL )";
+    private static final String TABLE_CREATE = "CREATE TABLE users (id INTEGER PRIMARY KEY NOT NULL, name text NOT NULL, email text NOT NULL, pwd text NOT NULL);";
 
     @Override
     public void onCreate(SQLiteDatabase db){
         //RUNS THE TABLE CREATE COMMANDS
         db.execSQL(TABLE_CREATE);
         this.db = db;
+
     }
     public DBHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -50,7 +50,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db = this.getWritableDatabase();
         ContentValues vals = new ContentValues();
 
-        String query = "select * from contacts";
+        String query = "SELECT * from contacts";
         Cursor cursor = db.rawQuery(query, null);
 
         int count = cursor.getCount();
@@ -61,7 +61,7 @@ public class DBHelper extends SQLiteOpenHelper {
         vals.put(COLUMN_PWD, user.getpwd());
 
         db.insert(TABLE_NAME, null, vals);
-        db.close();
+        //db.close();
     }
 
     public String getPass(String email){
@@ -86,7 +86,6 @@ public class DBHelper extends SQLiteOpenHelper {
             }while(cursor.moveToNext());
 
         }
-
         return b;
     }
 }

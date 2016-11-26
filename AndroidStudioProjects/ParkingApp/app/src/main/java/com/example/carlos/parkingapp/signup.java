@@ -50,6 +50,7 @@ public class signup extends AppCompatActivity {
                 user.setPwd(pwd1str);
 
                 helper.insertUser(user);
+
             }
 
         }

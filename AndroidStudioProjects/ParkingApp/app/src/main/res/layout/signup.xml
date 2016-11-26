@@ -64,7 +64,8 @@
         android:padding="2dp"
         android:layout_gravity="center"
         android:text="@string/signup"
-        android:id="@+id/signup_button2"/>
+        android:id="@+id/signup_button2"
+        android:onClick="onSignUp2"/>
 
 
 </LinearLayout>
